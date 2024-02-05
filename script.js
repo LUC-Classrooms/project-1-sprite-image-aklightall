@@ -16,7 +16,14 @@ function draw(){
   // this function runs again and again (60x per second)
   background(200); //light gray background
   
-  // add your image drawing code here
+  // 
+  fill(250,130,50);//orange color
+  ellipse(300,200,150,100);
+  
+  // 
+  fill(250,130,50);//orange color
+  triangle(225,200,240,240,100,200);
+  
 
 /* 
   Use the following if()...else() structure to incorporate mouse click control of your animation
