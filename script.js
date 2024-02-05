@@ -16,14 +16,36 @@ function draw(){
   // this function runs again and again (60x per second)
   background(200); //light gray background
   
-  // 
-  fill(250,130,50);//orange color
-  ellipse(300,200,150,100);
+  // Body
+  fill(255); // white color
+  ellipse(270,300,200,200);
+  ellipse(270,200,150,150);
+  ellipse(270,100,100,100);
+
+  // Eyes
+  fill(0); // black color
+  ellipse(250,90,10,10)
+  ellipse (290,90,10,10)
+
+  // Nose
+  fill(250,150,0); // orange color 
+  triangle(270, 110, 270, 120, 320, 115)
+
+  // Buttons
+  fill(0); //  black color
+  ellipse(270,300,10,10);
+  ellipse(270,230,10,10);
+  ellipse(270,180,10,10);
   
-  // 
-  fill(250,130,50);//orange color
-  triangle(225,200,240,240,100,200);
+
+  // Mouth
+  noFill();
+  stroke(0);
+  arc(270,125,70,15,0,PI)
+
+
   
+
 
 /* 
   Use the following if()...else() structure to incorporate mouse click control of your animation
