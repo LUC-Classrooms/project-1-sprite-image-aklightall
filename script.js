@@ -1,9 +1,11 @@
 /**
  * Project 1 - Interactive Image
- * Name: 
- * Comments: 
+ * Name: Ariana Lighthall
+ * Completed: 02/21/24
+ *  Basic description of user interactions to expect: Spinning Panda when mouse is clicked
+ * Citations: https://p5js.org/reference/
  */
-
+let rotationAngle = 0; // rotation angle variable
 let pandaX = 200; // x coordinate
 let pandaY = 200; // y coordinate
 
@@ -18,6 +20,7 @@ function draw(){
   background(0, 100, 0); // green background
 
   translate(width / 2, height / 2); // center of canvas
+  rotate (rotationAngle) // declaring variable
   
   // Face
   fill (225); // white color
@@ -40,16 +43,16 @@ function draw(){
 
   // Nose
   fill (0); // black nose 
-  ellipse (0, 20, 20, 20)
+  ellipse (0, 20, 20, 20); // nose shape
 
   // Mouth
   noFill();
   stroke (0); // black color
-  arc (0, 40, 80, 40, 0, PI)
+  arc (0, 40, 80, 40, 0, PI); // mouthshape
 
   // Line from Nose to Mouth
   stroke (0); // black color 
-  line (0, 20, 0, 60); // 
+  line (0, 20, 0, 60); // vertical line connecting to mouth
 
   // Blush on Cheeks
   fill (255, 192, 203); // pink color
@@ -59,11 +62,11 @@ function draw(){
 /* 
   Use the following if()...else() structure to incorporate mouse click control of your animation
 */
-  if(mouseIsPressed){
-    //check each frame to see if the mouse is pressed, then do something
-  } else {
-    // do something here if the mouse is NOT pressed
-  }
+if(mouseIsPressed){
+  rotationAngle += 0.1; // rotation speed
+} else {
+  rotationAngle = 0;
+}
 }
 
 /** 
